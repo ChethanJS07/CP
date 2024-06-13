@@ -7,24 +7,20 @@ int main()
   cin>>t;
   while(t--)
   {
-    int n,ans;
+    int n;
     cin>>n;
     int tot=0;
+    int val=0;
     for(int i=2;i<=n;i++)
     {
-      int curr=0;
-      int j=1;
-      while(i*j<=n)
+      int k=n/i;
+      int sum = (k*(k+1)*i)/2;
+      if(tot<=sum)
       {
-        curr+=i*j;
-        j++;
-      }
-      if(curr>=tot)
-      {
-        tot=curr;
-        ans=i;
+        tot=sum;
+        val=i;
       }
     }
-    cout<<ans<<"\n";
+    cout<<val<<"\n";
   }
 }
