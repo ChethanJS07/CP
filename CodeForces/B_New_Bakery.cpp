@@ -9,7 +9,7 @@ int main()
   {
     long long n,a,b;
     cin>>n>>a>>b;
-    long long i=1,tot=0;
+    long long tot=0;
     if(b<a)
     {
       tot=n*a;
@@ -17,7 +17,7 @@ int main()
     else
     {
       long long k = min(n, b - a);
-      tot = k * (2 * b - k + 1) / 2 + (n - k) * a;
+      tot = k*(2*b-k+1)/2+(n-k)*a;
     }
     cout<<tot<<endl;
   }
