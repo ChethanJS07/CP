@@ -6,19 +6,17 @@ class Solution
   public:
     int orientation(int p[], int q[], int r[]) 
     {
-      long long val = (long long)(q[1] - p[1]) * (r[0] - q[0]) - 
-                      (long long)(q[0] - p[0]) * (r[1] - q[1]);
+      long long val = (long long)(q[1] - p[1]) * (r[0] - q[0]) - (long long)(q[0] - p[0]) * (r[1] - q[1]);
       if (val == 0) return 0; 
       return (val > 0) ? 1 : 2;
     }
     
     bool onSegment(int p[], int q[], int r[]) 
     {
-      if (q[0] <= max(p[0], r[0]) && q[0] >= min(p[0], r[0]) &&
-          q[1] <= max(p[1], r[1]) && q[1] >= min(p[1], r[1]))
-          {
-            return true;
-          }
+      if (q[0] <= max(p[0], r[0]) && q[0] >= min(p[0], r[0]) && q[1] <= max(p[1], r[1]) && q[1] >= min(p[1], r[1]))
+      {
+        return true;
+      }
       return false;
     }
     
@@ -51,4 +49,4 @@ int main()
     Solution ob;
     cout << ob.doIntersect(p1, q1, p2, q2) << "\n";
   }
-}
+} 
