@@ -15,4 +15,4 @@ class Solution
       if(i<s.length()-1) return s.substr(i+1);
       return "";
     }
-};
+}; 
