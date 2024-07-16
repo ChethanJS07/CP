@@ -19,7 +19,7 @@ class Solution
       while (!s_p.empty() && !d_p.empty() && s_p.back() == d_p.back()) 
       {
         s_p.pop_back();
-        d_p.pop_back();
+        d_p.pop_back(); 
       }
       return string(s_p.size(), 'U') + string(rbegin(d_p), rend(d_p));
     }
